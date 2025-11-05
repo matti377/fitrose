@@ -1,4 +1,4 @@
-# 🏃‍♂️ Garmin Health Metrics API
+# 🏃‍♂️ Fitrose API
 
 A lightweight Flask API to fetch your personal Garmin Connect health and wellness data — including **steps, active minutes, resting heart rate, stress level, recovery time, Body Battery, HRV sleep score, and sleep coach feedback**.
 
