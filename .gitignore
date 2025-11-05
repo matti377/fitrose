@@ -1,0 +1,10 @@
+# Credentials & tokens
+.env
+.garminconnect/
+*.json  # Only if in project root (tokens are JSON)
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
