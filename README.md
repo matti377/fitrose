@@ -36,8 +36,8 @@ A lightweight Flask API to fetch your personal Garmin Connect health and wellnes
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/garmin-health-api.git
-cd garmin-health-api
+git clone https://github.com/matti377/fitrose.git
+cd fitrose
 ```
 
 ### 2. Install dependencies
@@ -130,7 +130,7 @@ sudo systemctl enable --now garmin-api
 
 ```
 .
-├── app.py                # Main Flask API
+├── api.py                # Main Flask API
 ├── garmin_auth.py        # Authentication logic (token + MFA)
 ├── login_cli.py          # One-time CLI login script
 ├── requirements.txt      # Python dependencies
