@@ -1,4 +1,5 @@
 # app.py
+import hmac
 from flask import Flask, jsonify, request
 import os
 from pathlib import Path
@@ -43,6 +44,15 @@ def get_health_metrics():
                 return jsonify({"error": "Invalid date format. Use YYYY-MM-DD"}), 400
         else:
             target_date = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+            
+            
+        # Test if apikey matches
+        apiKey_str = request.args.get('key')
+        expected_key = "YOURAPIKEYHERE"  # Replace with your actual API key
+        if(apiKey_str != expected_key):
+            return jsonify({"error": "The API KEY is incorrect"}), 401
+        
+
 
         # Fetch comprehensive daily summary
         user_summary = client.get_user_summary(target_date)
